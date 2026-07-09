@@ -1,0 +1,47 @@
+
+[build-system]
+
+requires = ["setuptools>=68", "wheel"]
+
+build-backend = "setuptools.build_meta"
+
+[project]
+
+name = "bge-large-en-v15-local"
+
+version = "1.0.0"
+
+description = "Local packaged BAAI/bge-large-en-v1.5 model files"
+
+readme = "README.md"
+
+requires-python = ">=3.8"
+
+license = {text = "MIT"}
+
+dependencies = [
+
+    "sentence-transformers>=2.2.2",
+
+    "transformers>=4.36.0",
+
+    "torch",
+
+    "safetensors"
+
+]
+
+[tool.setuptools.packages.find]
+
+where = ["src"]
+
+[tool.setuptools.package-data]
+
+bge_large_en_v15_local = [
+
+    "model/*",
+
+    "model/**/*"
+
+]
+
